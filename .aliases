@@ -20,3 +20,28 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 
 # clear
 alias cl='clear'
+
+# git add
+alias ga='git add'
+
+# git status
+alias gs='git status'
+
+# git commit
+alias gc='git commit'
+
+# git log
+alias gl='git log'
+
+# git remote
+alias gr='git remote'
+
+# git branch
+alias gb='git branch'
+
+# git checkout
+alias gb='git checkout'
+
+# python
+alias py='python'
+
