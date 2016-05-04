@@ -54,6 +54,11 @@ plugins=(git)
 # User configuration
 
 export PATH="//anaconda/bin:/Users/Algernon/.dnx/runtimes/dnx-coreclr-darwin-x64.1.0.0-rc1-update1/bin:/Users/Algernon/.dnx/bin:/Users/Algernon/scripts:/Users/Algernon/.nvm/versions/node/v4.2.4/bin:/Users/Algernon/bin:/usr/local/bin:/Users/Algernon/.composer/vendor/bin:/Users/Algernon/Development/android-sdk-macosx/tools:/android_sdk/sdk/platform-tools:/Users/Algernon/pebble-dev/PebbleSDK-3.0-dp2/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/Users/Algernon/go/bin"
+
+# NVM
+export NVM_DIR="/Users/Algernon/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -90,4 +95,5 @@ alias gc="git checkout"
 
 # DIR Shtuff
 alias ..='cd ..'
+alias cl="clear"
 
