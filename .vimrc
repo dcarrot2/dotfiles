@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype on                  " required
 set nowrap                    " don't wrap lines
 set background=dark
 set number
@@ -7,7 +7,6 @@ set showcmd
 set cursorline
 set incsearch
 set hlsearch
-hi Normal ctermbg=black
 set tabstop=4                 " a tab is 4 spaces
 set shiftwidth=4
 set expandtab
@@ -16,6 +15,7 @@ syntax on
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
+" Mappings
 inoremap jk <ESC>
 nnoremap ; :
 
@@ -44,6 +44,9 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 
+" Vim for go
+Plugin 'faith/vim-go'
+
 Plugin 'flazz/vim-colorschemes'
 
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
@@ -53,6 +56,20 @@ Plugin 'dracula/vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+
+
+"Golang settings
+let g:rehash256 = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+au BufRead,BufNewFile *.go set filetype=go
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
