@@ -1,11 +1,8 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/Algernon/.oh-my-zsh
-
 # Set name of the theme to load.
+export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# time that oh-my-zsh is loaded.  ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,13 +50,6 @@ plugins=(git)
 
 # User configuration
 
-export PATH="//anaconda/bin:/Users/Algernon/.dnx/runtimes/dnx-coreclr-darwin-x64.1.0.0-rc1-update1/bin:/Users/Algernon/.dnx/bin:/Users/Algernon/scripts:/Users/Algernon/.nvm/versions/node/v4.2.4/bin:/Users/Algernon/bin:/usr/local/bin:/Users/Algernon/.composer/vendor/bin:/Users/Algernon/Development/android-sdk-macosx/tools:/android_sdk/sdk/platform-tools:/Users/Algernon/pebble-dev/PebbleSDK-3.0-dp2/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/Users/Algernon/go/bin"
-
-# NVM
-export NVM_DIR="/Users/Algernon/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,4 +86,17 @@ alias gc="git checkout"
 # DIR Shtuff
 alias ..='cd ..'
 alias cl="clear"
+
+# xset
+if [[ xset m 1.7 1 ]]; then
+	echo "Setting mouse speed to something more reasonable"
+else
+	echo "xset program not found. Skipping set mouse speed"
+
+# android
+export ANDROID_STUDIO_HOME=${HOME}/Downloads/android-studio
+export ANDROID_HOME=${HOME}/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
 
